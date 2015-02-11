@@ -27,4 +27,11 @@ object Chapter04 {
     else gcd(b, a % b)
   }
 
+  def gcd2(x: Int, y: Int): Int = {
+    if(x == 0) y
+    else if(x < 0) gcd2(-x, y)
+    else if(y < 0) -gcd2(x, -y)
+    else gcd2(y % x, x)
+  }
+
 }
